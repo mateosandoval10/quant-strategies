@@ -8,8 +8,8 @@
 </head>
 <body>
 <header class="site"><div class="wrap">
-  <div class="brand"><a href="index.html" style="color:inherit;text-decoration:none">mateo<b>sandoval</b> / strategies</a></div>
-  <nav><a href="vtte.html">VTTE</a><a href="cbs.html" style="color:var(--text)">CBS</a><a href="crs.html">CRS</a><a href="qv2.html">QV&nbsp;v2</a></nav>
+  <div class="brand"><a href="index.html" style="color:inherit;text-decoration:none">mateo<b>sandoval</b> · systematic research</a></div>
+  <nav><a href="index.html#library">Strategies</a><a href="cbs.html">CBS</a><a href="vtte.html">VTTE</a><a href="crs.html">CRS</a><a href="qv2.html">QV v2</a></nav>
 </div></header>
 
 <div class="wrap">
@@ -17,6 +17,24 @@
 <div class="pagehead">
   <h1>Compression Breakout System</h1>
   <div class="sym">CBS · NASDAQ:AAPL (primary) · daily · 2005 – 2026 · cross-validated on NVDA, MSFT</div>
+</div>
+
+
+<div class="btnrow">
+  <a class="btn" href="https://www.tradingview.com/x/bFTYG47k/" target="_blank" rel="noopener">View live chart snapshot on TradingView ↗</a>
+  <a class="btn ghost" href="#validation">Jump to validation results</a>
+</div>
+<div class="shot">
+  <img src="assets/cbs_trades.png" alt="CBS on AAPL daily — every entry and exit labeled with P&L">
+  <div class="cap">AAPL daily, 2023–2026 view — CBS entries (BRK) and exits labeled with per-trade P&amp;L. Yellow tint = squeeze; teal = 200-day trend gate.</div>
+</div>
+<div class="shot">
+  <img src="assets/cbs_stats.png" alt="TradingView Strategy Tester key stats for CBS">
+  <div class="cap">TradingView Strategy Tester, full period: +$89,924.94 (+899.25%), max DD 14.43%, 30/51 winners, PF 4.33.</div>
+</div>
+<div class="shot">
+  <img src="assets/cbs_distribution.png" alt="CBS trade return distribution">
+  <div class="cap">Return distribution across all 51 trades: average loss −4.62% vs average profit +9.91% — the asymmetry the trail exit exists to create.</div>
 </div>
 
 <section style="padding-top:18px">
@@ -82,6 +100,20 @@
   died before its era arrived. Fixed-fractional risk (sized off the stop distance) cut the largest loss from
   $4,720 to $1,366 and raised the profit factor from 2.87 to 3.16 on the same signals.
   Risk sizing is what turns a signal into a system.</div>
+</section>
+
+<section id="validation">
+  <h2>Validation gauntlet — parameters frozen</h2>
+  <div class="tablewrap"><table>
+    <tr><th>Test</th><th>Condition</th><th>Net return</th><th>Profit factor</th><th>Win rate</th><th>Max DD</th></tr>
+    <tr><td class="txt">Subperiod A</td><td>2005 – 2015</td><td class="pos">+164%</td><td>3.35</td><td>64%</td><td>14.4%</td></tr>
+    <tr><td class="txt">Subperiod B</td><td>2015 – 2026</td><td class="pos">+293%</td><td>4.97</td><td>58%</td><td>10.3%</td></tr>
+    <tr><td class="txt">Slippage stress</td><td>5 ticks/side (5× modeled)</td><td class="pos">+256%</td><td>4.77</td><td>63%</td><td>10.7%</td></tr>
+  </table></div>
+  <div class="confirmed"><b>SURVIVES.</b> Positive with healthy profit factors in both decade halves and
+  at five times the modeled slippage. The two halves contain different market regimes (GFC recovery + 2011/2015
+  corrections vs 2018/2020/2022 shocks and two melt-ups) — the edge is not a single-era artifact, and it is not
+  execution-fragile. These runs used the Strategy Tester's own windowing on the identical compiled script.</div>
 </section>
 
 <section>
