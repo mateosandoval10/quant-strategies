@@ -1,17 +1,15 @@
-# Systematic Trading Strategies — Mateo Sandoval
+# quant-strategies — retired
 
-A library of original trading systems written in Pine Script v6 and backtested in TradingView's
-Strategy Tester with commissions and slippage modeled. Every page documents the mechanism, the
-parameters, the results against buy-and-hold and the S&P 500 — and the experiments that failed.
+The strategy write-ups that lived here are now maintained on the main portfolio:
 
-**Live site:** https://mateosandoval10.github.io/quant-strategies/
+- https://mateosandoval10.github.io/strategies.html — overview
+- https://mateosandoval10.github.io/cbs.html — Compression Breakout System
+- https://mateosandoval10.github.io/crs.html — Channel Reversion System
+- https://mateosandoval10.github.io/qv2.html — QV Signal Pro v2
+- https://mateosandoval10.github.io/vtte.html — Vol-Target Trend Engine
 
-| System | Market | Headline |
-|---|---|---|
-| Vol-Target Trend Engine | TQQQ daily | +3,862% (2010–2026), PF 3.33, regime gate + vol targeting |
-| Compression Breakout System | AAPL daily | +899% (2005–2026), PF 4.33, 14.4% max DD, risk-sized |
-| Channel Reversion System | QQQ daily | PF 2.28, 64% win rate, 15% max DD, ~80% in cash |
-| QV Signal Pro v2 | TQQQ daily | +489%, rebuilt from a trade-by-trade loss autopsy (full log) |
+Every page in this repository is now a redirect, so existing links keep working.
+Maintaining two copies risked the numbers drifting apart; the portfolio is the
+single source of truth.
 
-All results are in-sample, single-history backtests — treated as upper bounds, not forecasts.
-Not investment advice.
+Published Pine Script strategies: https://www.tradingview.com/u/mateosandoval1025/
